@@ -238,3 +238,4 @@ Temporary Items
 
 # Local msbuild copy to run on Mono
 src/ExternalApis/
+/src/.vs/CodeFormatter/v15/Server/sqlite3

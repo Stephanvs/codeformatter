@@ -3,11 +3,9 @@
 // See the LICENSE file in the project root for more information.
 
 using System.Collections.Generic;
-using System.ComponentModel.Composition;
+using System.Composition;
 using System.Linq;
-
 using Microsoft.CodeAnalysis;
-
 using Xunit;
 
 namespace Microsoft.DotNet.CodeFormatting.Tests

@@ -1,13 +1,10 @@
-﻿using Microsoft.CodeAnalysis;
-using Microsoft.DotNet.CodeFormatting;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Diagnostics;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Microsoft.CodeAnalysis;
+using Microsoft.DotNet.CodeFormatting;
 
 namespace CodeFormatter
 {
