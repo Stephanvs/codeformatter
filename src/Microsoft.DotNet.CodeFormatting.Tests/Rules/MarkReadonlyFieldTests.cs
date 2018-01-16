@@ -15,14 +15,11 @@ namespace Microsoft.DotNet.CodeFormatting.Tests
     /// </summary>
     public class MarkReadonlyFieldTests : GlobalSemanticRuleTestBase
     {
-        internal override IGlobalSemanticFormattingRule Rule
-        {
-            get { return new Rules.MarkReadonlyFieldsRule(); }
-        }
+        internal override IGlobalSemanticFormattingRule Rule => new Rules.MarkReadonlyFieldsRule();
 
         protected override IEnumerable<MetadataReference> GetSolutionMetadataReferences()
         {
-            foreach (MetadataReference reference in base.GetSolutionMetadataReferences())
+            foreach (var reference in base.GetSolutionMetadataReferences())
             {
                 yield return reference;
             }
@@ -267,7 +264,7 @@ class C
         public void TestIgnoredImportedField()
         {
             string text = @"
-using System.ComponentModel.Composition;
+using System.Composition;
 
 public interface ITest
 {

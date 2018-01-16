@@ -17,7 +17,7 @@ namespace Microsoft.DotNet.CodeFormatting.Rules
     /// <summary>
     /// Mark any fields that can provably be marked as readonly.
     /// </summary>
-    [GlobalSemanticRule(MarkReadonlyFieldsRule.Name, MarkReadonlyFieldsRule.Description, GlobalSemanticRuleOrder.MarkReadonlyFieldsRule, DefaultRule = false)]
+    [GlobalSemanticRule(Name, Description, GlobalSemanticRuleOrder.MarkReadonlyFieldsRule, DefaultRule = false)]
     internal sealed class MarkReadonlyFieldsRule : IGlobalSemanticFormattingRule
     {
         internal const string Name = "ReadonlyFields";
@@ -94,10 +94,13 @@ namespace Microsoft.DotNet.CodeFormatting.Rules
         /// </summary>
         private sealed class WritableFieldScanner : CSharpSyntaxWalker
         {
+            
             private static readonly HashSet<string> s_serializingFieldAttributes = new HashSet<string>
             {
-                "System.ComponentModel.Composition.ImportAttribute",
-                "System.ComponentModel.Composition.ImportManyAttribute",
+                typeof(System.Composition.ImportAttribute).FullName,
+                typeof(System.Composition.ImportManyAttribute).FullName,
+                typeof(System.ComponentModel.Composition.ImportAttribute).FullName,
+                typeof(System.ComponentModel.Composition.ImportManyAttribute).FullName
             };
 
             private readonly HashSet<IFieldSymbol> _fields = new HashSet<IFieldSymbol>();
@@ -109,7 +112,7 @@ namespace Microsoft.DotNet.CodeFormatting.Rules
                 _model = model;
                 _internalsVisibleToAttribute =
                     model.Compilation.GetTypeByMetadataName(
-                        "System.Runtime.CompilerServices.InternalsVisibleToAttribute");
+                        typeof(System.Runtime.CompilerServices.InternalsVisibleToAttribute).FullName);
             }
 
             public static async Task<HashSet<IFieldSymbol>> Scan(
