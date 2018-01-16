@@ -4,15 +4,15 @@
 
 using System.Reflection;
 
-[assembly: AssemblyCopyright("\x00a9 Microsoft Corporation.  All rights reserved.")]
-[assembly: AssemblyCompany("Microsoft Corporation")]
-[assembly: AssemblyFileVersion("1.0.0.0")]
-[assembly: AssemblyInformationalVersion("1.0.0.0")]
-[assembly: AssemblyVersion("1.0.0.0")]
+//[assembly: AssemblyCopyright("\x00a9 Microsoft Corporation.  All rights reserved.")]
+//[assembly: AssemblyCompany("Microsoft Corporation")]
+//[assembly: AssemblyFileVersion("1.0.0.0")]
+//[assembly: AssemblyInformationalVersion("1.0.0.0")]
+//[assembly: AssemblyVersion("1.0.0.0")]
 
-[assembly: AssemblyTitle("Microsoft.DotNet.DeadRegionAnalysis.Tests")]
-[assembly: AssemblyProduct("Microsoft.DotNet.DeadRegionAnalysis.Tests")]
-[assembly: AssemblyDescription("")]
-[assembly: AssemblyConfiguration("")]
-[assembly: AssemblyTrademark("")]
-[assembly: AssemblyCulture("")]
+//[assembly: AssemblyTitle("Microsoft.DotNet.DeadRegionAnalysis.Tests")]
+//[assembly: AssemblyProduct("Microsoft.DotNet.DeadRegionAnalysis.Tests")]
+//[assembly: AssemblyDescription("")]
+//[assembly: AssemblyConfiguration("")]
+//[assembly: AssemblyTrademark("")]
+//[assembly: AssemblyCulture("")]
